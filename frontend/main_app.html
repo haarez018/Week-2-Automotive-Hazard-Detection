@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Autonomous Hazard Logger</title>
+    <link rel="stylesheet" href="assets/main.css">
+</head>
+
+<body>
+
+<h2>🚗 Autonomous Hazard Logger (60% Milestone: Live Stream)</h2>
+
+<p>Live stream implemented. Rash Driving logic pending.</p>
+
+<div style="display: flex; gap: 30px; padding: 20px;">
+
+    <!-- Left: Live Camera Feed -->
+    <div style="background:#1e1e3f; padding:15px; border-radius:8px;">
+        <h3>Live Camera Feed</h3>
+
+        <!-- ✅ IMPORTANT: Canvas MUST have width + height -->
+        <canvas id="video-feed-canvas" width="640" height="480"
+                style="background:black; border:1px solid #444;"></canvas>
+
+        <p id="status-message">Status: CONNECTING...</p>
+    </div>
+
+    <!-- Right: Hazard Log (Task 3, later) -->
+    <div style="background:#1e1e3f; padding:15px; border-radius:8px;">
+        <h3>Hazard Log (Data Saved to DB)</h3>
+
+        <table border="1" cellpadding="6" style="color:white; border-color:#666;">
+            <tr>
+                <th>DB ID</th>
+                <th>Type</th>
+                <th>Severity</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td colspan="4">Live data will load here in Task 3.</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+<!-- ✅ MUST LOAD THE JS FILE FROM assets/ -->
+<script src="assets/realtime_viz.js"></script>
+
+</body>
+</html>
